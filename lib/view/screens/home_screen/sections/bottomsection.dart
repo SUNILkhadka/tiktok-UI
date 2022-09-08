@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:tiktok_clone/constants.dart';
 
 class BottomSection extends StatelessWidget {
   const BottomSection({
@@ -9,7 +10,7 @@ class BottomSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 55,
+      height: kbottomWidth,
       width: double.infinity,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -28,14 +29,13 @@ class BottomSection extends StatelessWidget {
     required IconData iconName,
     required String text,
   }) {
-    return Container(
+    return SizedBox(
       width: 60,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          InkWell(
-            highlightColor: Colors.transparent,
+          GestureDetector(
             onTap: () {},
             child: Icon(
               iconName,

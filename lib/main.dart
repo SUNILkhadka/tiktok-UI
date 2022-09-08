@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:tiktok_ui/screens/home_screen.dart';
+import 'package:get/get.dart';
+import 'package:tiktok_clone/view/auth/login.dart';
 
 void main() {
   runApp(const MyUI());
@@ -10,10 +11,10 @@ class MyUI extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark(),
-      home: const HomeScreen(),
+      home: LoginScreen(),
     );
   }
 }
